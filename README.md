@@ -44,12 +44,22 @@ node index
 ```
 ## 5、拓展
 池子的内容和概率都可自行修改，在gacha.js里修改即可
+
 ①修改概率
+
 fes池子(其他fes角色的概率请务必放在最后一位):
+
 ![fes](https://github.com/SayaSS/asset/blob/master/0%20(2).png?raw=true)
-普通池子
+
+普通池子:
+
 ![普池](https://github.com/SayaSS/asset/blob/master/fff600028a0500889b95.png?raw=true)
+
 ②修改角色
+
 准备好角色头像图片，尺寸要求175x175，命名格式为星级-角色名字，并把图片放进gacha/pcr里
-例子：3-Neneka.png![nnk](https://github.com/SayaSS/asset/blob/master/0%20(3).png?raw=true)
+
+例子：
+3-Neneka.png![nnk](https://github.com/SayaSS/asset/blob/master/0%20(3).png?raw=true)
+
 然后修改gacha.js里对应的数组内容
