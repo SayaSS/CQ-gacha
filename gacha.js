@@ -7,16 +7,16 @@ const canvas = createCanvas(1920, 1080);
 const ctx = canvas.getContext('2d');
 
 /*配置部分，请按自己需求配置*/
-let weight = [0.7, 0.9, 3.4, 18, 77]; // fes池子:up的fes角色(公主优衣)/其他fes角色(nnk,克总,511，公主佩可，公主可可萝)/其他3星/2星/1星（%）
-let charaUp = ["3-yui (purinsesu)"];//up的fes角色
-let charaUpSide = [//其他fes角色
+let weight = [0.7, 3.4, 18, 77, 0.9]; // fes池子:up的fes角色(公主优衣)/其他3星/2星/1星/其他fes角色(nnk,克总,511，公主佩可，公主可可萝)（%）
+let charaUp = ["3-yui (purinsesu)"];//up角色
+let charaUpSide = [
     "3-Christina",
     "3-Pekorinu (purinsesu)",
     "3-Neneka",
     "3-Muimi",
     "3-Kokkoro (purinsesu)"
-];
-let chara3 = [//其他3星
+];//其他fes角色,非fes池子不用管
+let chara3 = [
     "3-Akino","3-An","3-aNna",
     "3-Aoi (hennyusei)","3-Arisa","3-Gurea",
     "3-hacune","3-Io","3-Iriya (kurisumasu)",
@@ -28,8 +28,8 @@ let chara3 = [//其他3星
     "3-Nozomi","3-rino","3-Ruka",
     "3-Runa","3-Saren","3-Shizuru",
     "3-Tomo"
-];
-let chara2 = [//2星
+];//其他3星
+let chara2 = [
     "2-Akari","2-Ayane","2-Chika",
     "2-Eriko","2-Kaori","2-Kuuka",
     "2-Mahiru","2-Matsuri","2-Mifuyu",
@@ -37,15 +37,16 @@ let chara2 = [//2星
     "2-Miyako","2-Nanaka","2-Rin",
     "2-Shinobu","2-Shiori","2-Suzuna",
     "2-Tamaki","2-Tsumugi","2-Yuki",
-];
-let chara1 = [//1星
+];//2星
+let chara1 = [
     "1-Aoi", "1-Ayumi", "1-Hiyori",
     "1-Kurumi", "1-Misaki", "1-Misogi",
     "1-Rei", "1-Rima", "1-Suzume",
     "1-Yori", "1-Yukari",
-];
-let __resource='';//资源文件夹路径
+];//1星
+let __resource='C:\\Users\\pc\\Desktop\\test\\gacha';//资源文件夹路径
 /*配置部分，请按自己需求配置*/
+
 let wtp=[];let p=[];
 let __pcr=`${__resource}\\pcr`;
 function sum(arr) {let s = 0;for (let i=0; i<arr.length; i++) {s += arr[i];}return s;}
@@ -67,13 +68,13 @@ function rolls(times) {
         if (minj === 0){
             result.push(choice(charaUp));
         } else if (minj === 1) {
-            result.push(choice(charaUpSide));
-        } else if (minj === 2) {
             result.push(choice(chara3));
-        } else if (minj === 3) {
+        } else if (minj === 2) {
             result.push(choice(chara2));
-        } else if (minj === 4) {
+        } else if (minj === 3) {
             result.push(choice(chara1));
+        } else if (minj === 4) {
+            result.push(choice(charaUpSide));
         }
         for (let j in p){
             p[j] -= minp;
@@ -140,5 +141,6 @@ function main() {
 }
 
 module.exports={
-    main
+    main,
+    rolls
 }
