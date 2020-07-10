@@ -1,7 +1,7 @@
 # CQ-gacha
 酷Q机器人插件，公主连接模拟抽卡，尽量地模拟了真正的抽卡概率
 6次天井(300连)共1800次抽卡结果如下
-![井](https://pic.downk.cc/item/5f0856c714195aa594df81c6.png)
+![](https://pic.downk.cc/item/5f0856c714195aa594df81c6.png)
 ## 1、酷Q
 本插件依赖<a href="https://cqp.cc/" target="_blank">酷Q机器人</a>运作使用前请先安装酷q
 ## 2、coolq-http-api
