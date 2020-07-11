@@ -63,3 +63,11 @@ fes池子(其他fes角色的概率请务必放在最后一位):
 3-Neneka.png![nnk](https://github.com/SayaSS/asset/blob/master/0%20(3).png?raw=true)
 
 然后修改gacha.js里对应的数组内容
+## 6、备注
+如果你有和其他用到HTTP API的插件一起使用，可以安装个HTTP API的分身，前往[这里](https://github.com/yuudi/yobot/blob/master/documents/install/Windows-portable.md). 下载安装
+
+![](https://github.com/SayaSS/asset/blob/master/153347mktukdhsggve2dtt.png?raw=true)
+
+然后配置的时候去对应分身的HTTP API目录里配置就能一起使用了
+
+![](https://github.com/SayaSS/asset/blob/master/153246q56ky6ko09kke6y0.png?raw=true)
